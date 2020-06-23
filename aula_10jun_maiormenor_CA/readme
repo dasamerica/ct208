@@ -1,0 +1,15 @@
+Segunda lista de exercícios da disciplina CT208.
+
+O relatório e códigos apresentados analisam primeiramente:
+● Dedução do caso médio do maior
+● Tempo de processamento do maior e menor elemento
+● Tempo de processamento dos dois menores
+
+Adicionalmente implementa:
+● heap do máximo
+● heap do mínimo
+● heap do mínimo para uma amostra de 100 elementos (com valores de 2 à 10000)
+
+Quanto ao autômato celular é apresentado:
+● regra 90 começando com uma única célula central
+● uma formulação matemática que não faz parte do jardim do Éden
