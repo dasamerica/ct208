@@ -1,0 +1,29 @@
+.lightUpBoard td {
+    border: 1px solid #999;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ccc;
+    color: #222;
+    font-size: 12px;
+}
+.lightUpBoard th {
+    text-align: center;
+    vertical-align: middle;
+    color: #aaa;
+    font-size: 10px;
+}
+.lightUpBoard td.wall {
+    background-color: #222;
+    color: #fff;
+}
+.lightUpBoard td.bulb {
+    background-color: #ffd;
+    color: #fc0;
+}
+.lightUpBoard td.bulb.light {
+    color: #f00;
+}
+.lightUpBoard td.light { background-color: #ffd; }
+.lightUpBoard td.error { color: #f00 !important; }
