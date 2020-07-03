@@ -1,0 +1,6 @@
+Esta pasta contém os programas utilizados no projeto do LightUp.
+
+ct208_lightup.ipynb - é o código Python ajustado a partir do código do autor Taw disponivel em: https://github.com/taw/puzzle-solvers/blob/master/light_up_solver
+A solução utiliza CNF-SAT e o tool Z3 da Microsoft, licenciado para o MIT.
+
+Na sub-pasta Claudio_viewer está o programa Java desenvolvido pelo Cláudio Dias também aluno da CT208, para visualizar de forma gráfico o puzzle resolvido pelo Z3 solver.
