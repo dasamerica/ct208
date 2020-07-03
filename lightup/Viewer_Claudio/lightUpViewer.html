@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Light-Up Viewer</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./css/lightUp.css?6">
+        <style media="screen">
+            textarea#ascBoard {
+                width: 400px;
+                height: 400px;
+                font-family: monospace;
+                line-height: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <textarea id="ascBoard" rows="100" cols="100">
+WB1.B.W
+B..W..B
+.....B3
+B2.B.2B
+3B.....
+B..W...
+W.B.2BW</textarea>
+                    <div>
+                        <input type="text" id="width" size="1" value="" placeholder="width"> X <input type="text" id="height" size="1" value="" placeholder="height">
+                        <button type="button" class="btn btn-light" id="createBtn">Create</button>
+                        <button type="button" class="btn btn-light" id="drawBtn">Draw</button>
+                        <button type="button" class="btn btn-success" id="validateBtn">Validate</button>
+                    </div>
+                </div>
+                <div id="board" class="col" />
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/lightUp.js?6"></script>
+
+        <script type="text/javascript">
+        var board = new Board('#board');
+        $(function() {
+            $(document).on('click', '#createBtn', function() {
+                board.create($('#width').val() * 1, $('#height').val() * 1);
+                $('#ascBoard').val(board.exportASC());
+                board.draw(true);
+
+            });
+            $(document).on('click', '#drawBtn', function() {
+                board.importASC($('#ascBoard').val());
+                board.draw(true);
+            });
+            $(document).on('click', '#validateBtn', function() {
+                board.importASC($('#ascBoard').val());
+                if (!board.valid(true)) alert('Board is invalid! See console for details');
+                board.draw(true);
+            });
+        });
+        </script>
+    </body>
+</html>
