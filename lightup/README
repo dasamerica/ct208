@@ -4,3 +4,10 @@ ct208_lightup.ipynb - é o código Python ajustado a partir do código do autor 
 A solução utiliza CNF-SAT e o tool Z3 da Microsoft, licenciado para o MIT.
 
 Na sub-pasta Claudio_viewer está o programa Java desenvolvido pelo Cláudio Dias também aluno da CT208, para visualizar de forma gráfico o puzzle resolvido pelo Z3 solver.
+
+Os puzzles em formato texto estão armazenados como arquivo txt.
+
+Há diversos exemplos e tamanhos de puzzles utilizados para testes.
+
+O arquivo PDF é o relatório explicando como os resultados de implementação do solver para o LightUP incluindo a revisão bibliográfica com as diferentes formas de resolver o problema.
+
